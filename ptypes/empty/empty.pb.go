@@ -5,7 +5,7 @@ package empty
 
 import (
 	fmt "fmt"
-	proto "github.com/golang/protobuf/proto"
+	proto "github.com/ajainc/protobuf/proto"
 	math "math"
 )
 

@@ -1,7 +1,7 @@
 # Go support for Protocol Buffers - Google's data interchange format
 #
 # Copyright 2010 The Go Authors.  All rights reserved.
-# https://github.com/golang/protobuf
+# https://github.com/ajainc/protobuf
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -32,12 +32,12 @@
 all:	install
 
 install:
-	go install ./proto ./jsonpb ./ptypes ./protoc-gen-go
+	go install ./proto ./jsonpb ./ptypes ./protoc-gen-gox
 
 test:
-	go test ./... ./protoc-gen-go/testdata
-	go test -tags purego ./... ./protoc-gen-go/testdata
-	go build ./protoc-gen-go/testdata/grpc/grpc.pb.go
+	go test ./... ./protoc-gen-gox/testdata
+	go test -tags purego ./... ./protoc-gen-gox/testdata
+	go build ./protoc-gen-gox/testdata/grpc/grpc.pb.go
 
 clean:
 	go clean ./...
